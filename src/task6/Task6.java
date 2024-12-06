@@ -91,16 +91,6 @@ public class Task6 {
         return map[y][x] != '^' && map[y][x] != '#';
     }
 
-    private static char[][] parseMap(List<String> lines) {
-        char[][] map = new char[lines.size()][lines.get(0).length()];
-        for (int index = 0; index < lines.size(); index++) {
-            String line = lines.get(index);
-            map[index]= line.toCharArray();
-        }
-
-        return map;
-    }
-
     private static boolean isObstacle(char[][] array, Point p) {
         return insideMap(array, p) && array[p.y()][p.x()] == '#';
     }

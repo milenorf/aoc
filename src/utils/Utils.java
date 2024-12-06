@@ -35,4 +35,14 @@ public class Utils {
 
         return copy;
     }
+
+    public static char[][] parseMap(List<String> lines) {
+        char[][] map = new char[lines.size()][lines.get(0).length()];
+        for (int index = 0; index < lines.size(); index++) {
+            String line = lines.get(index);
+            map[index]= line.toCharArray();
+        }
+
+        return map;
+    }
 }
