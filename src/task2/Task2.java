@@ -2,13 +2,14 @@ package task2;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.nio.file.Files.readAllLines;
 
 public class Task2 {
     public static void solve() {
-        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task2/sample.txt");
+        List<String> lines = parse("src/task2/sample.txt");
         List<List<Integer>> reports = new ArrayList<>();
         for (String line : lines) {
             List<Integer> report = new ArrayList<>();
@@ -29,7 +30,7 @@ public class Task2 {
     }
 
     public static void solve2() {
-        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task2/input.txt");
+        List<String> lines = parse("src/task2/input.txt");
         List<List<Integer>> reports = new ArrayList<>();
         for (String line : lines) {
             List<Integer> report = new ArrayList<>();

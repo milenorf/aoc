@@ -2,15 +2,16 @@ package task7;
 
 import utils.Operation;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
-import static java.nio.file.Files.readAllLines;
 import static utils.Utils.parse;
 
 public class Task7 {
     public static void solve() {
-//        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task7/sample.txt");
-        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task7/input.txt");
+//        List<String> lines = parse("src/task7/sample.txt");
+        List<String> lines = parse("src/task7/input.txt");
 
         long result = 0;
         for (String line : lines) {

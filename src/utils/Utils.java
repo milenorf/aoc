@@ -1,7 +1,7 @@
 package utils;
 
 import java.io.IOException;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,7 +11,7 @@ import static java.nio.file.Files.readAllLines;
 public class Utils {
     public static List<String> parse(String filename) {
         try {
-            return readAllLines(Paths.get(filename));
+            return readAllLines(Path.of(filename).toAbsolutePath());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

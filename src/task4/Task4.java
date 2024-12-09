@@ -8,7 +8,7 @@ import static java.nio.file.Files.readAllLines;
 
 public class Task4 {
     public static void solve() {
-        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task4/input.txt");
+        List<String> lines = parse("src/task4/input.txt");
         char[][] array = new char[lines.size()][lines.get(0).length()];
         for (int index = 0; index < lines.size(); index++) {
             String line = lines.get(index);
@@ -33,7 +33,7 @@ public class Task4 {
     }
 
     public static void solve2() {
-        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task4/input.txt");
+        List<String> lines = parse("src/task4/input.txt");
         char[][] array = new char[lines.size()][lines.get(0).length()];
         for (int index = 0; index < lines.size(); index++) {
             String line = lines.get(index);

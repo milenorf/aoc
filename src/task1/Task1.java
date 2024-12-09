@@ -1,18 +1,15 @@
 package task1;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
-import static java.nio.file.Files.readAllLines;
+import static utils.Utils.parse;
 
 public class Task1 {
     public static void solve() {
-//        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task1/sample.txt");
-        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task1/input.txt");
+//        List<String> lines = parse("src/task1/sample.txt");
+        List<String> lines = parse("src/task1/input.txt");
         List<Integer> leftNums = new ArrayList<>();
         List<Integer> rightNums = new ArrayList<>();
 
@@ -40,8 +37,8 @@ public class Task1 {
     }
 
     public static void solve2() {
-//        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task1/sample.txt");
-        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task1/input.txt");
+//        List<String> lines = parse("src/task1/sample.txt");
+        List<String> lines = parse("src/task1/input.txt");
         List<Integer> leftNums = new ArrayList<>();
         List<Integer> rightNums = new ArrayList<>();
 
@@ -87,13 +84,5 @@ public class Task1 {
             similarityScore += similarCount * leftNumber * leftSimilarCount;
         }
         return similarityScore;
-    }
-
-    public static List<String> parse(String filename) {
-        try {
-            return readAllLines(Paths.get(filename));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 }

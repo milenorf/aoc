@@ -11,8 +11,8 @@ import static utils.Utils.*;
 
 public class Task6 {
     public static void solve() {
-        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task6/input.txt");
-//        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task6/input.txt");
+        List<String> lines = parse("src/task6/input.txt");
+//        List<String> lines = parse("src/task6/input.txt");
         char[][] map = parseMap(lines);
 
         Point start = findStart(map);
@@ -39,8 +39,8 @@ public class Task6 {
     }
 
     public static void solve2() {
-//        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task6/sample.txt");
-        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task6/input.txt");
+//        List<String> lines = parse("src/task6/sample.txt");
+        List<String> lines = parse("src/task6/input.txt");
         char[][] ogMap = parseMap(lines);
 
         int validObstructions = 0;

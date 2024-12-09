@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import static utils.Utils.*;
+import static utils.Utils.parse;
 
 public class Task9 {
     public static void solve() {
-//        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task9/sample.txt");
-        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task9/input.txt");
+//        List<String> lines = parse("src/task9/sample.txt");
+        List<String> lines = parse("src/task9/input.txt");
         String line = lines.get(0);
 
         int id = 0;
@@ -69,8 +69,8 @@ public class Task9 {
     }
 
     public static void solve2() {
-//        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task9/sample.txt");
-        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task9/input.txt");
+//        List<String> lines = parse("src/task9/sample.txt");
+        List<String> lines = parse("src/task9/input.txt");
         String line = lines.get(0);
 
         List<MemoryLocation> memory = new ArrayList<>();

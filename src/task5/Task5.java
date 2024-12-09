@@ -9,8 +9,8 @@ import static java.nio.file.Files.readAllLines;
 
 public class Task5 {
     public static void solve() {
-//        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task1/sample.txt");
-        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task5/input.txt");
+//        List<String> lines = parse("src/task1/sample.txt");
+        List<String> lines = parse("src/task5/input.txt");
 
         HashMap<Integer, Set<Integer>> deps = new HashMap<>();
         int index = 0;
@@ -59,8 +59,8 @@ public class Task5 {
     }
 
     public static void solve2() {
-        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task5/input.txt");
-//        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task5/input.txt");
+        List<String> lines = parse("src/task5/input.txt");
+//        List<String> lines = parse("src/task5/input.txt");
 
         HashMap<Integer, Set<Integer>> deps = new HashMap<>();
         int index = 0;

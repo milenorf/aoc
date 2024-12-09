@@ -12,8 +12,8 @@ import static utils.Utils.*;
 
 public class Task8 {
     public static void solve() {
-//        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task8/sample.txt");
-        List<String> lines = parse("/Users/milenorfeev/projects/aoc/src/task8/input.txt");
+//        List<String> lines = parse("src/task8/sample.txt");
+        List<String> lines = parse("src/task8/input.txt");
         char[][] map = parseMap(lines);
         HashMap<Character, List<Point>> antennaLocations = new HashMap<>();
         for (int y = 0; y < map.length; y++) {
@@ -66,14 +66,6 @@ public class Task8 {
     private static Distance calcDistance(Point a1, Point a2) {
         return new Distance(a2.x() - a1.x(), a2.y() - a1.y());
     }
-
-    public static void solve2() {
-//        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task6/sample.txt");
-        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task6/input.txt");
-        char[][] ogMap = parseMap(lines);
-
-    }
-
 
     private static boolean insideMap(char[][] map, Point p) {
         int x = p.x();

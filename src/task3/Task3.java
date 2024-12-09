@@ -2,7 +2,6 @@ package task3;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,7 +10,7 @@ import static java.nio.file.Files.readAllLines;
 
 public class Task3 {
     public static void solve() {
-        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task3/input.txt");
+        List<String> lines = parse("src/task3/input.txt");
         Pattern stringPattern = Pattern.compile("mul\\((\\d*),(\\d*)\\)");
         int total = 0;
         for (String line : lines) {
@@ -28,7 +27,7 @@ public class Task3 {
     }
 
     public static void solve2() {
-        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task3/input.txt");
+        List<String> lines = parse("src/task3/input.txt");
 //        List<String> lines = parse("/Users/milen.orfeev/workspace/aoc/src/task3/sample2.txt");
         String line = String.join("", lines);
         Pattern mulPattern = Pattern.compile("mul\\((\\d*),(\\d*)\\)");
