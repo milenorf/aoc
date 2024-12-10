@@ -45,4 +45,18 @@ public class Utils {
 
         return map;
     }
+
+    public static int[][] parseIntMap(List<String> lines) {
+        int[][] map = new int[lines.size()][lines.get(0).length()];
+        for (int index = 0; index < lines.size(); index++) {
+            String line = lines.get(index);
+            int[] intLine = new int[line.length()];
+            for (int innerIndex = 0; innerIndex < intLine.length; innerIndex++) {
+                intLine[innerIndex] = Character.digit(line.charAt(innerIndex), 10);
+            }
+            map[index] = intLine;
+        }
+
+        return map;
+    }
 }
