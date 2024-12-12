@@ -12,10 +12,18 @@ public class Task11 {
     public static void solve() {
 //        List<String> lines = parse("src/task11/sample1.txt");
 //        List<String> lines = parse("src/task11/sample.txt");
+//        List<String> lines = parse("src/task11/input.txt");
         List<String> lines = parse("src/task11/input.txt");
 
+
         String line = lines.get(0);
-        List<Long> stones = Arrays.stream(line.split(" ")).map(Task11::toStone).collect(Collectors.toList());
+//        solveInt(line);
+        solveChar(line);
+
+    }
+
+    private static void solveInt(String line) {
+        List<Long> stones = Arrays.stream(line.split(" ")).map(Task11::toStone).toList();
 
         int blinks = 75;
         List<Long> curStones = new ArrayList<>(stones);
@@ -37,12 +45,59 @@ public class Task11 {
                 }
             }
             curStones = nextStones;
-            System.out.println(blink);
+            System.out.println(blink + " " + curStones.size());
+//            printStones(curStones);
+        }
+
+        System.out.println(curStones.size());
+    }
+
+    private static void solveChar(String line) {
+        List<char[]> stones = Arrays.stream(line.split(" ")).map(String::toCharArray).toList();
+
+        int blinks = 75;
+        List<char[]> curStones = new ArrayList<>(stones);
+        for(int blink = 1; blink <= blinks; blink++) {
+
+            List<char[]> nextStones = new ArrayList<>();
+            for (int index = 0; index < curStones.size(); index++) {
+                char[] stone = curStones.get(index);
+                if (stone[0] == '0') {
+                    nextStones.add(new char[]{'1'});
+                } else {
+                    if (stone.length % 2 == 0) {
+                        nextStones.add(copyChar(stone, 0, stone.length / 2));
+                        nextStones.add(copyChar(stone, stone.length / 2, stone.length));
+                    } else {
+                        long newNumber = Long.parseLong(new String(stone)) * 2024;
+                        char[] newStone = String.valueOf(newNumber).toCharArray();
+                        nextStones.add(newStone);
+                    }
+                }
+            }
+            curStones = nextStones;
+            System.out.println(blink + " " + curStones.size());
 //            printStones(curStones);
         }
 
         System.out.println(curStones.size());
 
+    }
+
+    private static char[] copyChar(char[] array, int startIndex, int endIndex) {
+        int zeros = 0;
+        for (int index = startIndex; index < endIndex; index++) {
+            if (array[index] != 0) {
+                break;
+            }
+            zeros++;
+        }
+        char[] copy = new char[endIndex - zeros];
+        for (int i = startIndex; i  < endIndex; i++) {
+            copy[i] = array[i];
+        }
+
+        return copy;
     }
 
     private static void printStones(List<Long> curStones) {
