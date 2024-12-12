@@ -46,6 +46,13 @@ public class Utils {
         return map;
     }
 
+    public static boolean insideMap(char[][] map, Point p) {
+        int x = p.x();
+        int y = p.y();
+        return y >= 0 && y < map.length
+                && x >= 0 && x < map[0].length;
+    }
+
     public static int[][] parseIntMap(List<String> lines) {
         int[][] map = new int[lines.size()][lines.get(0).length()];
         for (int index = 0; index < lines.size(); index++) {
