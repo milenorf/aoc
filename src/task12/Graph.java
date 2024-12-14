@@ -1,4 +1,6 @@
 package task12;
 
-public record Graph() {
+import java.util.List;
+
+public record Graph(List<List<Node>> sections) {
 }
